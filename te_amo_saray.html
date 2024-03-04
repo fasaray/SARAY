@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #323641;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .btn-primary {
+      background-color: #e95f55;
+    }
+
+    .modal-content {
+      background-color: #fff !important;
+      color: #000000;
+      box-shadow: 0 0 10px rgb(255, 254, 254);
+    }
+
+    .modal-header, .modal-footer {
+      background-color: #fff;
+    }
+
+    .btn-secondary {
+      background-color: #e95f55;
+      color: #fff;
+    }
+  </style>
+  <title>Modal con Bootstrap</title>
+</head>
+<body>
+
+  <button class="btn btn-primary" id="mostrarModal">¡Sorpresa!</button>
+
+  <div class="modal" id="miModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Encabezado del Modal -->
+        <div class="modal-header">
+          <h4 class="modal-title">¡Hola!</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Contenido del Modal -->
+        <div class="modal-body">
+          <p>¡TE AMO! No se te olvide porfa. </p>
+        </div>
+
+        <!-- Pie del Modal -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var btn = document.getElementById("mostrarModal");
+      var modal = document.getElementById("miModal");
+
+      btn.addEventListener("click", function () {
+        $(modal).modal("show");
+      });
+    });
+  </script>
+</body>
+</html>
